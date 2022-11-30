@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
-const {db} = require("../mongo");
+// const {db} = require("../mongo");
 
 /* GET project. */
 router.get('/', function(req, res, next) {
@@ -9,3 +8,5 @@ router.get('/', function(req, res, next) {
   });
   
   module.exports = router;
+
+  

@@ -8,7 +8,7 @@ require("dotenv").config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var projectRouter = require('./routes/project')
+var projectRouter = require('./routes/projects')
 var { mongoConnect } = require('./mongo.js');
 mongoConnect();
 
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/project', projectRouter);
+app.use('/projects', projectRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
